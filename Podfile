@@ -6,4 +6,5 @@ target ‘MovieListerApp’ do
     pod 'Kingfisher'
     pod 'IQKeyboardManagerSwift'
     pod 'Firebase/Analytics'
+    pod 'Firebase/RemoteConfig'
 end
