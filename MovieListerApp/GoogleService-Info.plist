@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>198752472754-ouh18qeq7ssfib9r0evlgh4im2j3040d.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.198752472754-ouh18qeq7ssfib9r0evlgh4im2j3040d</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCSSIKbsodDftCGc-UcgQvjxiEvg3RAqsM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>198752472754</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ukocaman.MovieListerApp</string>
+	<key>PROJECT_ID</key>
+	<string>movielisterapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>movielisterapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:198752472754:ios:f0ad779634bf4feb1903ab</string>
+	<key>DATABASE_URL</key>
+	<string>https://movielisterapp.firebaseio.com</string>
+</dict>
+</plist>

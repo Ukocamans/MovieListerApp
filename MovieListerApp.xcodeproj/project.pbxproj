@@ -25,6 +25,7 @@
 		968D430E249633200066A564 /* ListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D430C249633200066A564 /* ListItemCell.xib */; };
 		968D4313249636F20066A564 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D4312249636F20066A564 /* DetailViewController.swift */; };
 		968D431824963B6F0066A564 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D431724963B6F0066A564 /* SplashViewController.swift */; };
+		968D431C249642A50066A564 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968D431B249642A50066A564 /* GoogleService-Info.plist */; };
 		D183681CB36B95CEEFC50DA6 /* Pods_MovieListerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26D651F3A75E03F3C640919 /* Pods_MovieListerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		968D430C249633200066A564 /* ListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemCell.xib; sourceTree = "<group>"; };
 		968D4312249636F20066A564 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		968D431724963B6F0066A564 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		968D431B249642A50066A564 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A26D651F3A75E03F3C640919 /* Pods_MovieListerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5954F093617499DBC3A758 /* Pods-MovieListerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListerApp.release.xcconfig"; path = "Target Support Files/Pods-MovieListerApp/Pods-MovieListerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				968D42D3249622630066A564 /* AppDelegate.swift */,
+				968D431B249642A50066A564 /* GoogleService-Info.plist */,
 				968D431A24963F4C0066A564 /* Resources */,
 				968D431924963F330066A564 /* Storyboards */,
 				968D431424963B430066A564 /* Splash */,
@@ -325,6 +328,7 @@
 			files = (
 				968D430E249633200066A564 /* ListItemCell.xib in Resources */,
 				968D42E0249622640066A564 /* LaunchScreen.storyboard in Resources */,
+				968D431C249642A50066A564 /* GoogleService-Info.plist in Resources */,
 				968D42DD249622640066A564 /* Assets.xcassets in Resources */,
 				968D42DB249622630066A564 /* Main.storyboard in Resources */,
 			);
