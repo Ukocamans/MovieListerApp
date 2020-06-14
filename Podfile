@@ -9,4 +9,5 @@ target ‘MovieListerApp’ do
     pod 'Firebase/RemoteConfig'
     pod 'RxSwift', '~> 4.5.0'
     pod 'RxCocoa', '~> 4.5.0'
+    pod 'RLBAlertsPickers', '~> 1.1.1'
 end

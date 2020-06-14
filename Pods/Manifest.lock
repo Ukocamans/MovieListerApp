@@ -88,6 +88,7 @@ PODS:
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.9)
   - Protobuf (3.12.0)
+  - RLBAlertsPickers (1.1.2)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
@@ -99,6 +100,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - IQKeyboardManagerSwift
   - Kingfisher
+  - RLBAlertsPickers (~> 1.1.1)
   - RxCocoa (~> 4.5.0)
   - RxSwift (~> 4.5.0)
   - SVProgressHUD
@@ -124,6 +126,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - RLBAlertsPickers
     - RxCocoa
     - RxSwift
     - SVProgressHUD
@@ -148,10 +151,11 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
   Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
+  RLBAlertsPickers: 2548943b0cb16620904cbd926a645362d1b43963
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9875dfaeef30c5c5e67119b5d8f3857c91a7daf8
+PODFILE CHECKSUM: 56a6f05020bb1fd5c0aec94c1196ec5155eec207
 
 COCOAPODS: 1.9.3
