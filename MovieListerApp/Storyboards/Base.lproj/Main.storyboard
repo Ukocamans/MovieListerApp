@@ -243,7 +243,7 @@
                     <navigationItem key="navigationItem" title="Title" id="52T-cv-QTA"/>
                     <connections>
                         <outlet property="tableView" destination="qbS-Ig-f3J" id="HWC-Li-dS9"/>
-                        <segue destination="c4f-8k-DV4" kind="show" id="kKv-zG-gBy"/>
+                        <segue destination="c4f-8k-DV4" kind="show" identifier="toDetail" id="kKv-zG-gBy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mk0-Zu-UOw" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -96,17 +96,15 @@
 		968D42D2249622630066A564 /* MovieListerApp */ = {
 			isa = PBXGroup;
 			children = (
+				968D42D3249622630066A564 /* AppDelegate.swift */,
+				968D431A24963F4C0066A564 /* Resources */,
+				968D431924963F330066A564 /* Storyboards */,
 				968D431424963B430066A564 /* Splash */,
 				968D430F249636C50066A564 /* Detail */,
 				968D4305249631D00066A564 /* List */,
 				968D430024962ECD0066A564 /* Search */,
 				968D42FB24962C490066A564 /* Network */,
 				968D42E824962B120066A564 /* Utilities */,
-				968D42D3249622630066A564 /* AppDelegate.swift */,
-				968D42D9249622630066A564 /* Main.storyboard */,
-				968D42DC249622640066A564 /* Assets.xcassets */,
-				968D42DE249622640066A564 /* LaunchScreen.storyboard */,
-				968D42E1249622640066A564 /* Info.plist */,
 			);
 			path = MovieListerApp;
 			sourceTree = "<group>";
@@ -237,6 +235,24 @@
 			children = (
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		968D431924963F330066A564 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				968D42D9249622630066A564 /* Main.storyboard */,
+				968D42DE249622640066A564 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		968D431A24963F4C0066A564 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				968D42DC249622640066A564 /* Assets.xcassets */,
+				968D42E1249622640066A564 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AF8BF9D08C8EB46CB9A1BAB3 /* Frameworks */ = {
@@ -522,7 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieListerApp/Info.plist;
+				INFOPLIST_FILE = MovieListerApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MovieListerApp/Info.plist;
+				INFOPLIST_FILE = MovieListerApp/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
