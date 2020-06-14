@@ -20,6 +20,9 @@
 		968D42FE24962C690066A564 /* EmptyRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D42FC24962C690066A564 /* EmptyRequestModel.swift */; };
 		968D42FF24962C690066A564 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D42FD24962C690066A564 /* NetworkRequest.swift */; };
 		968D430424962EFE0066A564 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D430324962EFE0066A564 /* SearchViewController.swift */; };
+		968D430A249632A10066A564 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D4309249632A10066A564 /* ListViewController.swift */; };
+		968D430D249633200066A564 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D430B249633200066A564 /* ListItemCell.swift */; };
+		968D430E249633200066A564 /* ListItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968D430C249633200066A564 /* ListItemCell.xib */; };
 		D183681CB36B95CEEFC50DA6 /* Pods_MovieListerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26D651F3A75E03F3C640919 /* Pods_MovieListerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,9 @@
 		968D42FC24962C690066A564 /* EmptyRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyRequestModel.swift; sourceTree = "<group>"; };
 		968D42FD24962C690066A564 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		968D430324962EFE0066A564 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		968D4309249632A10066A564 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		968D430B249633200066A564 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		968D430C249633200066A564 /* ListItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListItemCell.xib; sourceTree = "<group>"; };
 		A26D651F3A75E03F3C640919 /* Pods_MovieListerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieListerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5954F093617499DBC3A758 /* Pods-MovieListerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListerApp.release.xcconfig"; path = "Target Support Files/Pods-MovieListerApp/Pods-MovieListerApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +92,7 @@
 		968D42D2249622630066A564 /* MovieListerApp */ = {
 			isa = PBXGroup;
 			children = (
+				968D4305249631D00066A564 /* List */,
 				968D430024962ECD0066A564 /* Search */,
 				968D42FB24962C490066A564 /* Network */,
 				968D42E824962B120066A564 /* Utilities */,
@@ -142,6 +149,40 @@
 				968D430324962EFE0066A564 /* SearchViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		968D4305249631D00066A564 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				968D43062496327D0066A564 /* ViewModels */,
+				968D4307249632850066A564 /* Views */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		968D43062496327D0066A564 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		968D4307249632850066A564 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				968D4309249632A10066A564 /* ListViewController.swift */,
+				968D43082496328E0066A564 /* ListItemCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		968D43082496328E0066A564 /* ListItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				968D430B249633200066A564 /* ListItemCell.swift */,
+				968D430C249633200066A564 /* ListItemCell.xib */,
+			);
+			path = ListItemCell;
 			sourceTree = "<group>";
 		};
 		AF8BF9D08C8EB46CB9A1BAB3 /* Frameworks */ = {
@@ -212,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				968D430E249633200066A564 /* ListItemCell.xib in Resources */,
 				968D42E0249622640066A564 /* LaunchScreen.storyboard in Resources */,
 				968D42DD249622640066A564 /* Assets.xcassets in Resources */,
 				968D42DB249622630066A564 /* Main.storyboard in Resources */,
@@ -272,8 +314,10 @@
 				968D42F824962B690066A564 /* CodableExtension.swift in Sources */,
 				968D42F324962B690066A564 /* RefreshableExtension.swift in Sources */,
 				968D42FF24962C690066A564 /* NetworkRequest.swift in Sources */,
+				968D430A249632A10066A564 /* ListViewController.swift in Sources */,
 				968D42F524962B690066A564 /* UITableViewExtension.swift in Sources */,
 				968D42F624962B690066A564 /* UIViewExtension.swift in Sources */,
+				968D430D249633200066A564 /* ListItemCell.swift in Sources */,
 				968D42D4249622630066A564 /* AppDelegate.swift in Sources */,
 				968D42FE24962C690066A564 /* EmptyRequestModel.swift in Sources */,
 				968D42F224962B690066A564 /* UIImageViewExtension.swift in Sources */,

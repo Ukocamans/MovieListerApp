@@ -118,6 +118,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="actionSearch:" destination="3hk-NM-j1w" eventType="touchUpInside" id="tD1-SU-nGS"/>
+                                    <segue destination="dTC-68-jEC" kind="show" id="eIQ-BW-dKd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -196,6 +197,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FDr-wF-KWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="62" y="94"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="md2-DK-Nb4">
+            <objects>
+                <viewController title="List" id="dTC-68-jEC" customClass="ListViewController" customModule="MovieListerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBM-bD-JpB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qbS-Ig-f3J">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dTC-68-jEC" id="LAp-gX-HLH"/>
+                                    <outlet property="delegate" destination="dTC-68-jEC" id="h0q-aF-MBz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qbS-Ig-f3J" firstAttribute="leading" secondItem="Fkh-Kd-clF" secondAttribute="leading" id="32P-qw-ntG"/>
+                            <constraint firstItem="qbS-Ig-f3J" firstAttribute="bottom" secondItem="vBM-bD-JpB" secondAttribute="bottom" id="PeY-vF-dV9"/>
+                            <constraint firstItem="qbS-Ig-f3J" firstAttribute="top" secondItem="Fkh-Kd-clF" secondAttribute="top" id="RlM-HI-tfK"/>
+                            <constraint firstItem="Fkh-Kd-clF" firstAttribute="trailing" secondItem="qbS-Ig-f3J" secondAttribute="trailing" id="Z9u-Px-r1d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fkh-Kd-clF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="52T-cv-QTA"/>
+                    <connections>
+                        <outlet property="tableView" destination="qbS-Ig-f3J" id="HWC-Li-dS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mk0-Zu-UOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="97.601199400299862"/>
         </scene>
     </scenes>
 </document>
