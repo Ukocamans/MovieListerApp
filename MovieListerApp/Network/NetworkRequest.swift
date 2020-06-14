@@ -11,6 +11,8 @@ import Alamofire
 
 protocol Request: class {
     
+    var apiV: String{get}
+    var hasAuth: Bool{get}
     var endpoint: String{get}
     var paramHeaders: [String]{get}
     var showLoading: Bool{get}
@@ -20,18 +22,26 @@ protocol Request: class {
 
 class NetworkRequest<M: Codable, RM: Codable>: Request{
     
+    var apiKey: String = "be8d9030"
+    
+    var apiV: String = "1"
+    var hasAuth: Bool = true
     var endpoint: String = ""
     var paramHeaders: [String] = []
     var showLoading: Bool = true
     var httpMethod: HTTPMethod = .post
-    var host: String = "https://api.coronatracker.com/"
+    var host: String = "http://www.omdbapi.com/"
     
     func send(reqModel: RM, completion: @escaping (M?, Error?) -> Void) {
         guard checkInternet() else { return }
         
         //let link = createPath()
         let link = host + endpoint
-        let parameters = reqModel.dictionary
+        var parameters = reqModel.dictionary
+        parameters["v"] = apiV
+        if hasAuth {
+            parameters["apikey"] = apiKey
+        }
         let encoding:ParameterEncoding = httpMethod == .get ? URLEncoding.default : JSONEncoding.default
         
         let request = Alamofire.request(link, method: httpMethod, parameters: parameters, encoding: encoding, headers: nil)

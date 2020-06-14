@@ -11,27 +11,58 @@ import UIKit
 class ListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    let viewModel = ListViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        installRefreshControl()
+        setupRx()
         setupTableView()
+        viewModel.searchRequest()
     }
     
     func setupTableView() {
         tableView.registerNib(name: "ListItemCell")
     }
+    
+    func setupRx() {
+        viewModel.reloadData.subscribe(onNext: { [weak self] _ in
+            self?.tableView.reloadData()
+        }).disposed(by: viewModel.disposeBag)
+    }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.datasource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath) as! ListItemCell
+        cell.configure(viewModel: viewModel.datasource[indexPath.row])
         return cell
+    }
+}
+
+extension ListViewController: Refreshable {
+    var refreshControl: UIRefreshControl? {
+        get {
+            tableView.refreshControl
+        }
+        set {
+        }
+    }
+    
+    var refreshableView: UIScrollView! {
+        return tableView
+    }
+    
+    func handleRefresh(_ sender: Any) {
+        refreshControl?.beginRefreshing()
+        viewModel.searchRequest(reset: true) { [weak self] () in
+            self?.refreshControl?.endRefreshing()
+        }
     }
     
     

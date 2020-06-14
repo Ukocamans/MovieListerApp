@@ -51,7 +51,7 @@ class SearchViewModel {
     func search(text: String?) -> SearchRequestModel? {
         if text?.count ?? 0 > 2 {
             let reqModel = SearchRequestModel()
-            reqModel.page = 1
+            reqModel.page = 0
             reqModel.year = selectedYear
             reqModel.type = selectedType
             reqModel.search = text ?? ""

@@ -14,6 +14,9 @@
 		966F232124966DF80006CA86 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F232024966DF80006CA86 /* SearchRequest.swift */; };
 		966F232324966F4E0006CA86 /* SearchRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F232224966F4E0006CA86 /* SearchRequestModel.swift */; };
 		966F23252496708E0006CA86 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F23242496708E0006CA86 /* SearchResponseModel.swift */; };
+		966F2327249672B50006CA86 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F2326249672B50006CA86 /* ListViewModel.swift */; };
+		966F2329249673570006CA86 /* ListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F2328249673570006CA86 /* ListItemCellViewModel.swift */; };
+		966F232B249677FE0006CA86 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F232A249677FE0006CA86 /* BaseModel.swift */; };
 		968D42D4249622630066A564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D42D3249622630066A564 /* AppDelegate.swift */; };
 		968D42DB249622630066A564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968D42D9249622630066A564 /* Main.storyboard */; };
 		968D42DD249622640066A564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968D42DC249622640066A564 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		966F232024966DF80006CA86 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		966F232224966F4E0006CA86 /* SearchRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestModel.swift; sourceTree = "<group>"; };
 		966F23242496708E0006CA86 /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
+		966F2326249672B50006CA86 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		966F2328249673570006CA86 /* ListItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCellViewModel.swift; sourceTree = "<group>"; };
+		966F232A249677FE0006CA86 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		968D42D0249622630066A564 /* MovieListerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieListerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968D42D3249622630066A564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968D42DA249622630066A564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 			children = (
 				968D42FC24962C690066A564 /* EmptyRequestModel.swift */,
 				968D42FD24962C690066A564 /* NetworkRequest.swift */,
+				966F232A249677FE0006CA86 /* BaseModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 		968D43062496327D0066A564 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				966F2326249672B50006CA86 /* ListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			children = (
 				968D430B249633200066A564 /* ListItemCell.swift */,
 				968D430C249633200066A564 /* ListItemCell.xib */,
+				966F2328249673570006CA86 /* ListItemCellViewModel.swift */,
 			);
 			path = ListItemCell;
 			sourceTree = "<group>";
@@ -456,10 +465,13 @@
 				968D43212496487A0066A564 /* SplashViewModel.swift in Sources */,
 				968D42FF24962C690066A564 /* NetworkRequest.swift in Sources */,
 				966F231E249668600006CA86 /* StringExtension.swift in Sources */,
+				966F2327249672B50006CA86 /* ListViewModel.swift in Sources */,
 				968D430A249632A10066A564 /* ListViewController.swift in Sources */,
+				966F232B249677FE0006CA86 /* BaseModel.swift in Sources */,
 				968D42F524962B690066A564 /* UITableViewExtension.swift in Sources */,
 				968D42F624962B690066A564 /* UIViewExtension.swift in Sources */,
 				966F232324966F4E0006CA86 /* SearchRequestModel.swift in Sources */,
+				966F2329249673570006CA86 /* ListItemCellViewModel.swift in Sources */,
 				968D430D249633200066A564 /* ListItemCell.swift in Sources */,
 				968D42D4249622630066A564 /* AppDelegate.swift in Sources */,
 				966F23252496708E0006CA86 /* SearchResponseModel.swift in Sources */,

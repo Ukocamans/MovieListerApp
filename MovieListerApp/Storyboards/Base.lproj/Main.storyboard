@@ -118,7 +118,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="actionSearch:" destination="3hk-NM-j1w" eventType="touchUpInside" id="tD1-SU-nGS"/>
-                                    <segue destination="dTC-68-jEC" kind="show" id="eIQ-BW-dKd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -159,6 +158,7 @@
                         <outlet property="labelType" destination="uvd-Gh-Bnj" id="Q6D-bB-VM9"/>
                         <outlet property="labelYear" destination="HEK-zb-98f" id="ZOl-R3-gpm"/>
                         <outlet property="textFieldTitle" destination="ale-Sf-e4e" id="TEN-rt-AJS"/>
+                        <segue destination="dTC-68-jEC" kind="show" identifier="toList" id="kXV-j4-WXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UoR-cK-LvU" sceneMemberID="firstResponder"/>

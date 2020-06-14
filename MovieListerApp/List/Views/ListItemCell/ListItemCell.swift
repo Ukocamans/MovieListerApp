@@ -25,4 +25,10 @@ class ListItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(viewModel: ListItemCellViewModel) {
+        labelTitle.text = viewModel.title
+        labelType.text = viewModel.type
+        labelYear.text = viewModel.year
+    }
+    
 }

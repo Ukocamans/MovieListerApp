@@ -44,7 +44,7 @@ class SearchViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let model = sender as? SearchRequestModel, let controller = segue.destination as? ListViewController {
-            //TODO: give model to list view controller view Model
+            controller.viewModel.reqModel = model
         }
     }
 }
