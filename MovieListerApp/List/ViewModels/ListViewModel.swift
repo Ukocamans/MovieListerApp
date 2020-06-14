@@ -22,7 +22,10 @@ class ListViewModel {
     
     func searchRequest(reset: Bool = false, completion: requestFinished = nil ) {
         guard !isBusy else { return }
-        reqModel.page = reset ? 0 : reqModel.page
+        if reset {
+            reqModel.page = 0
+            datasource = []
+        }
         isBusy = true
         let request = SearchRequest()
         reqModel.page += 1
