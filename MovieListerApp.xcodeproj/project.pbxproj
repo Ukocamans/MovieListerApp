@@ -91,6 +91,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		966F23182496651B0006CA86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				968D42EF24962B690066A564 /* CodableExtension.swift */,
+				968D42EB24962B690066A564 /* CollectionExtension.swift */,
+				968D42EA24962B690066A564 /* RefreshableExtension.swift */,
+				968D42E924962B690066A564 /* UIImageViewExtension.swift */,
+				968D42EC24962B690066A564 /* UITableViewExtension.swift */,
+				968D42ED24962B690066A564 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		968D42C7249622630066A564 = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +143,8 @@
 		968D42E824962B120066A564 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				966F23182496651B0006CA86 /* Extensions */,
 				968D431D249643C80066A564 /* Managers */,
-				968D42EF24962B690066A564 /* CodableExtension.swift */,
-				968D42EB24962B690066A564 /* CollectionExtension.swift */,
-				968D42EA24962B690066A564 /* RefreshableExtension.swift */,
-				968D42E924962B690066A564 /* UIImageViewExtension.swift */,
-				968D42EC24962B690066A564 /* UITableViewExtension.swift */,
-				968D42ED24962B690066A564 /* UIViewExtension.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
