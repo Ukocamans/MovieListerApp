@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231624965FD80006CA86 /* AppConfigModel.swift */; };
 		968D42D4249622630066A564 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D42D3249622630066A564 /* AppDelegate.swift */; };
 		968D42DB249622630066A564 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 968D42D9249622630066A564 /* Main.storyboard */; };
 		968D42DD249622640066A564 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 968D42DC249622640066A564 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		64434101E89259BE16FA7D9D /* Pods-MovieListerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListerApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieListerApp/Pods-MovieListerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		966F231624965FD80006CA86 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		968D42D0249622630066A564 /* MovieListerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieListerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		968D42D3249622630066A564 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		968D42DA249622630066A564 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		966F231524965FB60006CA86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				966F231624965FD80006CA86 /* AppConfigModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		968D42C7249622630066A564 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 				968D430024962ECD0066A564 /* Search */,
 				968D42FB24962C490066A564 /* Network */,
 				968D42E824962B120066A564 /* Utilities */,
+				966F231524965FB60006CA86 /* Models */,
 			);
 			path = MovieListerApp;
 			sourceTree = "<group>";
@@ -401,6 +412,7 @@
 				968D430424962EFE0066A564 /* SearchViewController.swift in Sources */,
 				968D42F424962B690066A564 /* CollectionExtension.swift in Sources */,
 				968D42F824962B690066A564 /* CodableExtension.swift in Sources */,
+				966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */,
 				968D431F249643E40066A564 /* FirebaseRemoteConfigManager.swift in Sources */,
 				968D42F324962B690066A564 /* RefreshableExtension.swift in Sources */,
 				968D431824963B6F0066A564 /* SplashViewController.swift in Sources */,

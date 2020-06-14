@@ -16,12 +16,12 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupRx()
         viewModel.fetchRemoteConfig()
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-//            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "MainNavigationController") as! UINavigationController
-//            UIApplication.shared.keyWindow?.rootViewController = viewController
-//        }
         
+    }
+    
+    func setupRx() {
+        viewModel.title.bind(to: labelTitle.rx.text).disposed(by: viewModel.disposeBag)
     }
 }

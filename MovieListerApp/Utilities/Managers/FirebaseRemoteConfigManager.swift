@@ -13,6 +13,8 @@ class FirebaseRemoteConfigManager {
     static let shared = FirebaseRemoteConfigManager()
     var remoteConfig: RemoteConfig!
     
+    var config: AppConfigModel?
+    
     func configure() {
         remoteConfig = RemoteConfig.remoteConfig()
         let settings = RemoteConfigSettings()
@@ -20,7 +22,7 @@ class FirebaseRemoteConfigManager {
         remoteConfig.configSettings = settings
     }
     
-    func fetchRemoteConfig() {
+    func fetchRemoteConfig(completion: @escaping (Bool) -> Void) {
         remoteConfig.setDefaults(["app_title": "Bilyoner" as NSObject])
         remoteConfig.fetch(withExpirationDuration: 0) { [weak self] (status, error) in
             if status == .success {
@@ -28,9 +30,21 @@ class FirebaseRemoteConfigManager {
                 self?.remoteConfig.activate(completion: { (status, error) in
                     print(error?.localizedDescription ?? "")
                 })
+                if let data = self?.remoteConfig.configValue(forKey: "app_config").dataValue {
+                    do {
+                        self?.config = try JSONDecoder().decode(AppConfigModel.self, from: data)
+                        completion(true)
+                    } catch {
+                        print(error)
+                        completion(false)
+                    }
+                } else {
+                    completion(false)
+                }
             } else {
                 print("Config not fetched")
                 print("Error: \(error?.localizedDescription ?? "No error available.")")
+                completion(false)
             }
         }
     }

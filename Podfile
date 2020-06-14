@@ -7,4 +7,6 @@ target ‘MovieListerApp’ do
     pod 'IQKeyboardManagerSwift'
     pod 'Firebase/Analytics'
     pod 'Firebase/RemoteConfig'
+    pod 'RxSwift', '~> 4.5.0'
+    pod 'RxCocoa', '~> 4.5.0'
 end
