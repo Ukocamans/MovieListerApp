@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V5v-JV-qNi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6sK-yh-TtB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -165,16 +165,32 @@
             </objects>
             <point key="canvasLocation" x="1076" y="94.902548725637189"/>
         </scene>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="Bs4-TO-KG4">
             <objects>
-                <viewController id="6sK-yh-TtB" sceneMemberID="viewController">
+                <viewController id="6sK-yh-TtB" customClass="SplashViewController" customModule="MovieListerApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D9l-nK-jaa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42t-MO-P5S">
+                                <rect key="frame" x="30" y="453" width="354" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="42t-MO-P5S" firstAttribute="centerX" secondItem="IFD-hB-Fdp" secondAttribute="centerX" id="Dnv-aX-Axs"/>
+                            <constraint firstItem="42t-MO-P5S" firstAttribute="centerY" secondItem="IFD-hB-Fdp" secondAttribute="centerY" id="SSp-BU-Trz"/>
+                            <constraint firstItem="42t-MO-P5S" firstAttribute="leading" secondItem="IFD-hB-Fdp" secondAttribute="leading" constant="30" id="tp4-UY-IqA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="IFD-hB-Fdp"/>
                     </view>
+                    <connections>
+                        <outlet property="labelTitle" destination="42t-MO-P5S" id="0fN-rJ-ypg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LI3-Ue-GEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,7 +199,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ymU-yA-b63">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V5v-JV-qNi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="V5v-JV-qNi" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hu2-WN-voY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
