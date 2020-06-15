@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SVProgressHUD
 
 protocol Request: class {
     
@@ -52,9 +53,14 @@ class NetworkRequest<M: BaseResponseModel, RM: Codable>: Request{
             parameters["apikey"] = apiKey
         }
         let encoding:ParameterEncoding = httpMethod == .get ? URLEncoding.default : JSONEncoding.default
-        
+        if showLoading {
+            SVProgressHUD.show()
+        }
         let request = Alamofire.request(link, method: httpMethod, parameters: parameters, encoding: encoding, headers: nil)
         request.responseJSON { response in
+            if self.showLoading {
+                SVProgressHUD.dismiss()
+            }
             print("Request: \(String(describing: response.request))") //original url request
             if response.error == nil {
                 do {
