@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ListItemCell" rowHeight="226" id="m2O-He-SxE" userLabel="List Item Cell" customClass="ListItemCell" customModule="MovieListerApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m2O-He-SxE" id="nXR-99-a1h">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDG-oq-qzi">
+                        <rect key="frame" x="18" y="21" width="378" height="131.5"/>
+                        <string key="text">Labelsaşdjkflaskjdflasjdlfkjsadlfkjasldkfjlaskjdflaksdjflkasjdflkjasldfkjasldkfjlaskjdflaskjfldkajlsfkdjlaskdjflasjkdflaskjdflkajsdlfkjasldfkjlsadkfjlsadkjflaskdjflsakdjflsakdjflsakfjasf</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                        <color key="textColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW3-P1-ylR">
+                        <rect key="frame" x="18" y="162.5" width="43.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2n-Qm-r1r">
+                        <rect key="frame" x="65.5" y="163" width="44" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                        <color key="textColor" red="0.36470588240000001" green="0.36470588240000001" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QW3-P1-ylR" firstAttribute="top" secondItem="PDG-oq-qzi" secondAttribute="bottom" constant="10" id="Aeo-II-uZt"/>
+                    <constraint firstItem="X2n-Qm-r1r" firstAttribute="leading" secondItem="QW3-P1-ylR" secondAttribute="trailing" constant="4" id="GXM-hz-Ef0"/>
+                    <constraint firstItem="PDG-oq-qzi" firstAttribute="top" secondItem="nXR-99-a1h" secondAttribute="topMargin" constant="10" id="WZq-N7-EOp"/>
+                    <constraint firstItem="QW3-P1-ylR" firstAttribute="leading" secondItem="PDG-oq-qzi" secondAttribute="leading" id="g8m-56-fIg"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="QW3-P1-ylR" secondAttribute="bottom" constant="10" id="upI-dO-Mz5"/>
+                    <constraint firstItem="X2n-Qm-r1r" firstAttribute="centerY" secondItem="QW3-P1-ylR" secondAttribute="centerY" id="z9Z-ZP-TAv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="PDG-oq-qzi" firstAttribute="leading" secondItem="m2O-He-SxE" secondAttribute="leading" constant="18" id="28T-yI-wDt"/>
+                <constraint firstItem="PDG-oq-qzi" firstAttribute="centerX" secondItem="m2O-He-SxE" secondAttribute="centerX" id="L78-4C-xKr"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QW3-P1-ylR" secondAttribute="trailing" constant="60" id="maE-7I-s5z"/>
+            </constraints>
+            <connections>
+                <outlet property="labelTitle" destination="PDG-oq-qzi" id="FRp-hS-wmH"/>
+                <outlet property="labelType" destination="QW3-P1-ylR" id="tuJ-VF-Yus"/>
+                <outlet property="labelYear" destination="X2n-Qm-r1r" id="BgU-OE-fO2"/>
+            </connections>
+            <point key="canvasLocation" x="192.75362318840581" y="125.22321428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
