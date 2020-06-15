@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965911B02497B06700CA01C5 /* DetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911AF2497B06700CA01C5 /* DetailResponseModel.swift */; };
 		966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231624965FD80006CA86 /* AppConfigModel.swift */; };
 		966F231A2496655B0006CA86 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F23192496655B0006CA86 /* SearchViewModel.swift */; };
 		966F231C249666110006CA86 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231B249666110006CA86 /* AlertManager.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		64434101E89259BE16FA7D9D /* Pods-MovieListerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListerApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieListerApp/Pods-MovieListerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		965911AF2497B06700CA01C5 /* DetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseModel.swift; sourceTree = "<group>"; };
 		966F231624965FD80006CA86 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		966F23192496655B0006CA86 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		966F231B249666110006CA86 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				966F231624965FD80006CA86 /* AppConfigModel.swift */,
 				966F23242496708E0006CA86 /* SearchResponseModel.swift */,
+				965911AF2497B06700CA01C5 /* DetailResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */,
 				968D431F249643E40066A564 /* FirebaseRemoteConfigManager.swift in Sources */,
 				966F231A2496655B0006CA86 /* SearchViewModel.swift in Sources */,
+				965911B02497B06700CA01C5 /* DetailResponseModel.swift in Sources */,
 				968D42F324962B690066A564 /* RefreshableExtension.swift in Sources */,
 				968D431824963B6F0066A564 /* SplashViewController.swift in Sources */,
 				966F231C249666110006CA86 /* AlertManager.swift in Sources */,
