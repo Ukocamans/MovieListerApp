@@ -332,9 +332,6 @@
                         <outlet property="labelGenre" destination="RD4-gK-ryf" id="h9j-6O-VOf"/>
                         <outlet property="labelPlot" destination="XUz-DO-H8O" id="xLq-hC-Qd9"/>
                         <outlet property="labelTitle" destination="7uF-Iq-lvb" id="4zL-HB-8s8"/>
-                        <outlet property="lblGenre" destination="RD4-gK-ryf" id="PZq-qd-H3A"/>
-                        <outlet property="lblPlot" destination="XUz-DO-H8O" id="ZOS-K6-H1M"/>
-                        <outlet property="lblTitle" destination="7uF-Iq-lvb" id="aPK-Ts-fdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HgO-gx-BDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
