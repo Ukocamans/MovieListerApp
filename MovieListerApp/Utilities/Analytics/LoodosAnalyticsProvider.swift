@@ -21,7 +21,7 @@ final class LoodosAnalyticsProvider: AnalyticsProvider {
     func track(event: AnalyticsEvent) {
         switch event {
         case .viewItem(let id, let name, let category):
-            print("view item logged: with id: \(id) name: \(name) category: \(category)")
+            print("LOODOS: view item logged: with id: \(id) name: \(name) category: \(category)")
             
         }
     }
