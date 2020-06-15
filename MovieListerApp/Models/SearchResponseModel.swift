@@ -8,17 +8,13 @@
 
 import Foundation
 
-class SearchResponseModel: BaseModel {
-    var error: String = ""
+class SearchResponseModel: BaseResponseModel {
     var search: [SearchModel] = []
     var totalResults: String = ""
-    var response: String = ""
     
     enum CodingKeys: String, CodingKey {
         case search = "Search"
         case totalResults
-        case response = "Response"
-        case error = "Error"
     }
     
     override init() {
@@ -29,8 +25,6 @@ class SearchResponseModel: BaseModel {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
         search = try container.decodeIfPresent([SearchModel].self, forKey: .search) ?? []
-        error = try container.decodeIfPresent(String.self, forKey: .error) ?? ""
-        response = try container.decodeIfPresent(String.self, forKey: .response) ?? ""
         totalResults = try container.decodeIfPresent(String.self, forKey: .totalResults) ?? ""
         try super.init(from: decoder)
     }
@@ -39,8 +33,6 @@ class SearchResponseModel: BaseModel {
 
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(search, forKey: .search)
-        try container.encodeIfPresent(error, forKey: .error)
-        try container.encodeIfPresent(response, forKey: .response)
         try container.encodeIfPresent(totalResults, forKey: .totalResults)
         try super.encode(to: encoder)
     }

@@ -18,6 +18,12 @@ class SplashViewModel {
     let disposeBag = DisposeBag()
     
     func fetchRemoteConfig() {
+        
+        if !Connectivity.checkInternet() {
+            AlertManager.shared.showAlert(title: "Error", message: "Please check your internet connection")
+            return
+        }
+        
         remoteConfigManager.fetchRemoteConfig { [weak self] (isSuccess) in
             if isSuccess {
                 self?.title.accept(self?.remoteConfigManager.config?.splashTitle)
@@ -28,6 +34,7 @@ class SplashViewModel {
                     UIApplication.shared.keyWindow?.rootViewController = viewController
                 }
             } else {
+                
             }
         }
     }

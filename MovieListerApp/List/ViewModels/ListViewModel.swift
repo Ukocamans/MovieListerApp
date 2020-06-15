@@ -30,15 +30,15 @@ class ListViewModel {
         let request = SearchRequest()
         reqModel.page += 1
         request.send(reqModel: reqModel) { [weak self] (model, error) in
-            completion?()
             self?.isBusy = false
+            completion?()
             if error == nil {
                 self?.datasource +=  model?.search.map({ (model) -> ListItemCellViewModel in
                     return ListItemCellViewModel(model: model)
                 }) ?? []
                 self?.reloadData.accept(())
             } else {
-                print(error)
+                AlertManager.shared.showAlert(title: "Error!", message: error?.localizedDescription)
             }
         }
     }

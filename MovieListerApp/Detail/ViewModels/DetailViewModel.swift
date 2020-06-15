@@ -29,7 +29,7 @@ class DetailViewModel {
             if error == nil {
                 self?.configure(with: model)
             } else {
-                
+                AlertManager.shared.showAlert(title: "Error!", message: error?.localizedDescription)
             }
         }
     }

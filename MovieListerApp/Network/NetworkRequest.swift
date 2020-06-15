@@ -20,7 +20,13 @@ protocol Request: class {
     var host: String{get}
 }
 
-class NetworkRequest<M: Codable, RM: Codable>: Request{
+struct LoodosError: Error {
+    var code: Int?
+    var domain: Int?
+    var localizedDescription: String?
+}
+
+class NetworkRequest<M: BaseResponseModel, RM: Codable>: Request{
     
     var apiKey: String = "be8d9030"
     
@@ -32,8 +38,11 @@ class NetworkRequest<M: Codable, RM: Codable>: Request{
     var httpMethod: HTTPMethod = .post
     var host: String = "http://www.omdbapi.com/"
     
-    func send(reqModel: RM, completion: @escaping (M?, Error?) -> Void) {
-        guard checkInternet() else { return }
+    func send(reqModel: RM, completion: @escaping (M?, LoodosError?) -> Void) {
+        if !Connectivity.checkInternet() {
+            AlertManager.shared.showAlert(title: "Error", message: "Please check your internet connection")
+            return
+        }
         
         //let link = createPath()
         let link = host + endpoint
@@ -50,29 +59,39 @@ class NetworkRequest<M: Codable, RM: Codable>: Request{
             if response.error == nil {
                 do {
                     let model = try JSONDecoder().decode(M.self, from: response.data!)
-                    completion(model, nil)
+                    dump(model)
+                    if model.response {
+                        completion(model, nil)
+                    } else {
+                        let loodosError = LoodosError(code: nil, domain: nil, localizedDescription: model.error)
+                        completion(nil, loodosError)
+                    }
                 } catch {
-                    completion(nil, error)
+                    let loodosError = LoodosError(code: nil, domain: nil, localizedDescription: error.localizedDescription)
+                    completion(nil, loodosError)
                 }
             }else {
-                completion(nil, response.error)
+                let loodosError = LoodosError(code: response.response?.statusCode, domain: nil, localizedDescription: response.error?.localizedDescription)
+                completion(nil, loodosError)
             }
             
         }
     }
     
-    func checkInternet() -> Bool {
-        if Connectivity.isConnectedToInternet {
-            return true
-        } else {
-            return false
-        }
-    }
+    
 }
 
 struct Connectivity {
     static let sharedInstance = NetworkReachabilityManager()!
     static var isConnectedToInternet:Bool {
         return self.sharedInstance.isReachable
+    }
+    
+    static func checkInternet() -> Bool {
+        if Connectivity.isConnectedToInternet {
+            return true
+        } else {
+            return false
+        }
     }
 }

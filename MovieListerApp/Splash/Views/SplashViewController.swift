@@ -17,8 +17,11 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
         setupRx()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.fetchRemoteConfig()
-        
     }
     
     func setupRx() {

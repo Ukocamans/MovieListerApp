@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DetailResponseModel: BaseModel {
+class DetailResponseModel: BaseResponseModel {
     var title: String = ""
     var year: String = ""
     var rated: String = ""
@@ -33,7 +33,6 @@ class DetailResponseModel: BaseModel {
     var boxOffice: String = ""
     var production: String = ""
     var website: String = ""
-    var response: String = ""
     
     enum CodingKeys: String, CodingKey {
         case title = "Title"
@@ -58,7 +57,6 @@ class DetailResponseModel: BaseModel {
         case boxOffice = "BoxOffice"
         case production = "Production"
         case website = "Website"
-        case response = "Response"
     }
     
     override init() {
@@ -90,7 +88,6 @@ class DetailResponseModel: BaseModel {
         boxOffice = try container.decodeIfPresent(String.self, forKey: .boxOffice) ?? ""
         production = try container.decodeIfPresent(String.self, forKey: .production) ?? ""
         website = try container.decodeIfPresent(String.self, forKey: .website) ?? ""
-        response = try container.decodeIfPresent(String.self, forKey: .response) ?? ""
 
         try super.init(from: decoder)
     }
@@ -120,7 +117,6 @@ class DetailResponseModel: BaseModel {
         try container.encodeIfPresent(boxOffice, forKey: .boxOffice)
         try container.encodeIfPresent(production, forKey: .production)
         try container.encodeIfPresent(website, forKey: .website)
-        try container.encodeIfPresent(response, forKey: .response)
         try super.encode(to: encoder)
     }
 }
