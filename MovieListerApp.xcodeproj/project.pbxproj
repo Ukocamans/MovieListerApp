@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		965911B02497B06700CA01C5 /* DetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911AF2497B06700CA01C5 /* DetailResponseModel.swift */; };
+		965911B32497B2CD00CA01C5 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B22497B2CD00CA01C5 /* DetailRequest.swift */; };
+		965911B52497B2F600CA01C5 /* DetailRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B42497B2F600CA01C5 /* DetailRequestModel.swift */; };
 		966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231624965FD80006CA86 /* AppConfigModel.swift */; };
 		966F231A2496655B0006CA86 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F23192496655B0006CA86 /* SearchViewModel.swift */; };
 		966F231C249666110006CA86 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231B249666110006CA86 /* AlertManager.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		64434101E89259BE16FA7D9D /* Pods-MovieListerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieListerApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieListerApp/Pods-MovieListerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		965911AF2497B06700CA01C5 /* DetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseModel.swift; sourceTree = "<group>"; };
+		965911B22497B2CD00CA01C5 /* DetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRequest.swift; sourceTree = "<group>"; };
+		965911B42497B2F600CA01C5 /* DetailRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRequestModel.swift; sourceTree = "<group>"; };
 		966F231624965FD80006CA86 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		966F23192496655B0006CA86 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		966F231B249666110006CA86 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 				FC5954F093617499DBC3A758 /* Pods-MovieListerApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		965911B12497B2BC00CA01C5 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				965911B22497B2CD00CA01C5 /* DetailRequest.swift */,
+				965911B42497B2F600CA01C5 /* DetailRequestModel.swift */,
+			);
+			path = Datasource;
 			sourceTree = "<group>";
 		};
 		966F231524965FB60006CA86 /* Models */ = {
@@ -256,6 +269,7 @@
 		968D430F249636C50066A564 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				965911B12497B2BC00CA01C5 /* Datasource */,
 				968D4310249636CE0066A564 /* ViewModels */,
 				968D4311249636D60066A564 /* Views */,
 			);
@@ -465,6 +479,7 @@
 				965911B02497B06700CA01C5 /* DetailResponseModel.swift in Sources */,
 				968D42F324962B690066A564 /* RefreshableExtension.swift in Sources */,
 				968D431824963B6F0066A564 /* SplashViewController.swift in Sources */,
+				965911B52497B2F600CA01C5 /* DetailRequestModel.swift in Sources */,
 				966F231C249666110006CA86 /* AlertManager.swift in Sources */,
 				968D43212496487A0066A564 /* SplashViewModel.swift in Sources */,
 				968D42FF24962C690066A564 /* NetworkRequest.swift in Sources */,
@@ -476,6 +491,7 @@
 				968D42F624962B690066A564 /* UIViewExtension.swift in Sources */,
 				966F232324966F4E0006CA86 /* SearchRequestModel.swift in Sources */,
 				966F2329249673570006CA86 /* ListItemCellViewModel.swift in Sources */,
+				965911B32497B2CD00CA01C5 /* DetailRequest.swift in Sources */,
 				968D430D249633200066A564 /* ListItemCell.swift in Sources */,
 				968D42D4249622630066A564 /* AppDelegate.swift in Sources */,
 				966F23252496708E0006CA86 /* SearchResponseModel.swift in Sources */,
