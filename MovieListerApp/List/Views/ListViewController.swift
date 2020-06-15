@@ -24,6 +24,7 @@ class ListViewController: UIViewController {
     
     func setupTableView() {
         tableView.registerNib(name: "ListItemCell")
+        tableView.tableFooterView = UIView()
     }
     
     func setupRx() {
