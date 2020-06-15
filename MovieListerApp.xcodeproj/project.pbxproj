@@ -11,6 +11,11 @@
 		965911B32497B2CD00CA01C5 /* DetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B22497B2CD00CA01C5 /* DetailRequest.swift */; };
 		965911B52497B2F600CA01C5 /* DetailRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B42497B2F600CA01C5 /* DetailRequestModel.swift */; };
 		965911B72497B39300CA01C5 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B62497B39300CA01C5 /* DetailViewModel.swift */; };
+		965911BA2497B8AA00CA01C5 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911B92497B8AA00CA01C5 /* AnalyticsEvent.swift */; };
+		965911BC2497B90900CA01C5 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911BB2497B90900CA01C5 /* AnalyticsProvider.swift */; };
+		965911BE2497B94A00CA01C5 /* FirebaseAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911BD2497B94A00CA01C5 /* FirebaseAnalyticsProvider.swift */; };
+		965911C02497B9EA00CA01C5 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911BF2497B9EA00CA01C5 /* AnalyticsManager.swift */; };
+		965911C22497BB2F00CA01C5 /* LoodosAnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965911C12497BB2F00CA01C5 /* LoodosAnalyticsProvider.swift */; };
 		966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231624965FD80006CA86 /* AppConfigModel.swift */; };
 		966F231A2496655B0006CA86 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F23192496655B0006CA86 /* SearchViewModel.swift */; };
 		966F231C249666110006CA86 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966F231B249666110006CA86 /* AlertManager.swift */; };
@@ -51,6 +56,11 @@
 		965911B22497B2CD00CA01C5 /* DetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRequest.swift; sourceTree = "<group>"; };
 		965911B42497B2F600CA01C5 /* DetailRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRequestModel.swift; sourceTree = "<group>"; };
 		965911B62497B39300CA01C5 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		965911B92497B8AA00CA01C5 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		965911BB2497B90900CA01C5 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
+		965911BD2497B94A00CA01C5 /* FirebaseAnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsProvider.swift; sourceTree = "<group>"; };
+		965911BF2497B9EA00CA01C5 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		965911C12497BB2F00CA01C5 /* LoodosAnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoodosAnalyticsProvider.swift; sourceTree = "<group>"; };
 		966F231624965FD80006CA86 /* AppConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigModel.swift; sourceTree = "<group>"; };
 		966F23192496655B0006CA86 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		966F231B249666110006CA86 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -118,6 +128,18 @@
 			path = Datasource;
 			sourceTree = "<group>";
 		};
+		965911B82497B80700CA01C5 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				965911B92497B8AA00CA01C5 /* AnalyticsEvent.swift */,
+				965911BF2497B9EA00CA01C5 /* AnalyticsManager.swift */,
+				965911BB2497B90900CA01C5 /* AnalyticsProvider.swift */,
+				965911BD2497B94A00CA01C5 /* FirebaseAnalyticsProvider.swift */,
+				965911C12497BB2F00CA01C5 /* LoodosAnalyticsProvider.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		966F231524965FB60006CA86 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				968D42D3249622630066A564 /* AppDelegate.swift */,
-				968D431B249642A50066A564 /* GoogleService-Info.plist */,
 				968D431A24963F4C0066A564 /* Resources */,
 				968D431924963F330066A564 /* Storyboards */,
 				968D431424963B430066A564 /* Splash */,
@@ -190,6 +211,7 @@
 		968D42E824962B120066A564 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				965911B82497B80700CA01C5 /* Analytics */,
 				966F23182496651B0006CA86 /* Extensions */,
 				968D431D249643C80066A564 /* Managers */,
 			);
@@ -331,6 +353,7 @@
 		968D431A24963F4C0066A564 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				968D431B249642A50066A564 /* GoogleService-Info.plist */,
 				968D42DC249622640066A564 /* Assets.xcassets */,
 				968D42E1249622640066A564 /* Info.plist */,
 			);
@@ -476,6 +499,7 @@
 				968D430424962EFE0066A564 /* SearchViewController.swift in Sources */,
 				968D42F424962B690066A564 /* CollectionExtension.swift in Sources */,
 				968D42F824962B690066A564 /* CodableExtension.swift in Sources */,
+				965911BC2497B90900CA01C5 /* AnalyticsProvider.swift in Sources */,
 				966F231724965FD80006CA86 /* AppConfigModel.swift in Sources */,
 				968D431F249643E40066A564 /* FirebaseRemoteConfigManager.swift in Sources */,
 				966F231A2496655B0006CA86 /* SearchViewModel.swift in Sources */,
@@ -483,6 +507,7 @@
 				968D42F324962B690066A564 /* RefreshableExtension.swift in Sources */,
 				968D431824963B6F0066A564 /* SplashViewController.swift in Sources */,
 				965911B52497B2F600CA01C5 /* DetailRequestModel.swift in Sources */,
+				965911BE2497B94A00CA01C5 /* FirebaseAnalyticsProvider.swift in Sources */,
 				966F231C249666110006CA86 /* AlertManager.swift in Sources */,
 				965911B72497B39300CA01C5 /* DetailViewModel.swift in Sources */,
 				968D43212496487A0066A564 /* SplashViewModel.swift in Sources */,
@@ -497,9 +522,12 @@
 				966F2329249673570006CA86 /* ListItemCellViewModel.swift in Sources */,
 				965911B32497B2CD00CA01C5 /* DetailRequest.swift in Sources */,
 				968D430D249633200066A564 /* ListItemCell.swift in Sources */,
+				965911C22497BB2F00CA01C5 /* LoodosAnalyticsProvider.swift in Sources */,
+				965911C02497B9EA00CA01C5 /* AnalyticsManager.swift in Sources */,
 				968D42D4249622630066A564 /* AppDelegate.swift in Sources */,
 				966F23252496708E0006CA86 /* SearchResponseModel.swift in Sources */,
 				968D42FE24962C690066A564 /* EmptyRequestModel.swift in Sources */,
+				965911BA2497B8AA00CA01C5 /* AnalyticsEvent.swift in Sources */,
 				968D42F224962B690066A564 /* UIImageViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -39,5 +39,6 @@ class DetailViewModel {
         imageURL.accept(model?.poster)
         genre.accept(model?.genre)
         plot.accept(model?.plot)
+        AnalyticsManager.shared.track(event: .viewItem(id: imdbId, name: title.value ?? "", category: genre.value ?? ""))
     }
 }
