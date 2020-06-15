@@ -31,6 +31,12 @@ class ListViewController: UIViewController {
             self?.tableView.reloadData()
         }).disposed(by: viewModel.disposeBag)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let imdbId = sender as? String, let controller = segue.destination as? DetailViewController {
+            controller.viewModel.imdbId = imdbId
+        }
+    }
 }
 
 extension ListViewController: UITableViewDataSource {
@@ -42,6 +48,13 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath) as! ListItemCell
         cell.configure(viewModel: viewModel.datasource[indexPath.row])
         return cell
+    }
+}
+
+extension ListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let imdbId = viewModel.datasource[indexPath.row].id
+        performSegue(withIdentifier: "toDetail", sender: imdbId)
     }
 }
 
